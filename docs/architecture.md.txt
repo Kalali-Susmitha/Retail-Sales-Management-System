@@ -17,6 +17,7 @@
 
 3. Data Flow
   The application implements a Unidirectional Data Flow, where the Dashboard component acts as the central state manager.
+![Image](https://github.com/user-attachments/assets/d910f767-f095-46f8-a743-980199c14080)
 
  1.Request Initiation: User interactions (Search, Filter, Sort, or Pagination) update a unified queryParams state object residing in the parent component (Dashboard.js).
  2.Centralized Processing: Any change to queryParams triggers the data processing pipeline on the full dataset, ensuring predictable state management.
