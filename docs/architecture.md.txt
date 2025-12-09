@@ -1,0 +1,26 @@
+1. Backend Architecture and Module Responsibilities
+  The backend follows the Model-Controller-Service (MCS) pattern, which separates request handling from business logic.
+  Module/Folder   :: ,Responsibility
+  routes/     :: Defines API endpoints and directs incoming HTTP requests to the appropriate controller function.
+  controllers/:: Handles request parsing, calls service functions for logic, and formats the final HTTP response.
+  services/   :: Contains the core business logic, orchestrating data operations such as applying filtering/sorting.
+  utils/      :: Houses reusable, stateless helper functions, such as data loading and processing helpers.
+  index.js    :: The entry file, responsible for initializing the Express server and loading routes. 
+
+2. Frontend Architecture and Module Responsibilities:
+  The frontend is built using a component-driven architecture with React,managing state predictably.
+  Module/Folder:: Responsibility
+  components/  :: Holds reusable UI pieces (e.g., FilterBar,TransactionTable),encapsulating their specific presentation logic."
+  hooks/       :: Contains custom logic hooks for abstracting complex state management or data fetching.
+  services/    :: Handles all external data retrieval, fetching structured sales data from the backend API."
+  App.js       :: The main application component, responsible for setting up the top-level structure and rendering the primary application shell."
+
+3. Data Flow
+  The application implements a Unidirectional Data Flow, where the Dashboard component acts as the central state manager.
+
+ 1.Request Initiation: User interactions (Search, Filter, Sort, or Pagination) update a unified queryParams state object residing in the parent component (Dashboard.js).
+ 2.Centralized Processing: Any change to queryParams triggers the data processing pipeline on the full dataset, ensuring predictable state management.
+ 3.Pipeline Execution Order: To ensure accurate results that reflect the combined state, the processing steps are strictly executed in the following order:
+     Search (Applied first) → Filters (Applied second) → Sorting (Applied third) → Pagination (Applied last, 10 items per page).
+ 4.Display: The final, processed, and paginated data slice is passed as a prop to the TransactionTable.js for efficient rendering.
+
