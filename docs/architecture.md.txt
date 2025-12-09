@@ -24,4 +24,29 @@
  3.Pipeline Execution Order: To ensure accurate results that reflect the combined state, the processing steps are strictly executed in the following order:
      Search (Applied first) → Filters (Applied second) → Sorting (Applied third) → Pagination (Applied last, 10 items per page).
  4.Display: The final, processed, and paginated data slice is passed as a prop to the TransactionTable.js for efficient rendering.
+4.Folder Structure:This document details the architectural design, folder structure, and data flow for the Retail Sales Management System, aligning with the professional standards and structural requirements of the assignment.
+The project utilizes a single repository structure with clear separation between the client and server components:
+
+root/
+├── backend/ 
+│   ├── src/ 
+│   │   ├── controllers/ 
+│   │   ├── services/ 
+│   │   ├── utils/ 
+│   │   ├── routes/ 
+│   │   └── index.js 
+│   └── package.json 
+├── frontend/ 
+│   ├── src/ 
+│   │   ├── components/ 
+│   │   ├── routes/ 
+│   │   ├── services/ 
+│   │   ├── utils/ 
+│   │   ├── hooks/ 
+│   │   └── main.jsx/App.jsx 
+        └── README
+│   └── package.json 
+└── docs/
+|   └── architecture.md 
+└── README
 
