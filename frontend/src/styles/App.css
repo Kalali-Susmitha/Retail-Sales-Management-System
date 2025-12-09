@@ -1,0 +1,19 @@
+/* App.css: Corrected layout styles for Sidebar and Main Content */
+
+.main-content {
+  margin-left: 200px;
+}
+
+.dashboard-content {
+  /* Padding to clear the fixed 60px Navbar and add necessary spacing */
+  padding-top: 100px; 
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.dashboard-content h2 {
+    /* Reset top margin to align correctly below the Navbar area */
+    margin-top: 0; 
+    margin-bottom: 15px; 
+}

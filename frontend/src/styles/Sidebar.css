@@ -1,0 +1,70 @@
+/* --- 1. BASE SIDEBAR CONTAINER --- */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1f2937;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    text-align: center;
+}
+
+/* --- 2. HEADER STYLES (Title: Retail Sales Management System) --- */
+.sidebar h2 {
+    /* Main title styles */
+    margin-bottom: 30px;
+    font-size: 24px;
+    padding: 0 20px; /* Padding for the header text */
+    text-align: left;
+    font-weight: bold; /* Ensure the title is clearly bold */
+}
+
+/* --- 3. LIST STYLES --- */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+/* --- 4. LIST ITEM STYLES (Padding/Hover area) --- */
+.sidebar ul li {
+    margin: 0; /* Adjusted: Removed vertical margin from li to put padding on anchor */
+    padding: 0; /* Padding will be moved to the anchor tag */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li:hover {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* --- 5. CRITICAL: LINK STYLING (Making it look like bold text) --- */
+.nav-item {
+    /* Required for link functionality (which is an anchor tag) */
+    text-decoration: none; /* REMOVES THE UNDERLINE */
+    font-weight: bold; /* Ensures the text is bold */
+    color: white; /* Ensures the text is white */
+    
+    /* Makes the entire area clickable and handles padding */
+    display: block; 
+    padding: 10px 20px; /* NEW: Added padding to the anchor tag */
+    margin: 5px 0; /* Added back vertical margin between items */
+}
+
+/* Ensure active/visited/hover states don't change the color or style */
+.nav-item:visited,
+.nav-item:hover,
+.nav-item:active {
+    color: white; 
+    background-color: transparent; /* Reset background, hover handles this */
+}
+
+/* Style for the active/current page link */
+.nav-item.active {
+    /* Optional: Highlight the active page */
+    background-color: #3b82f6; 
+}

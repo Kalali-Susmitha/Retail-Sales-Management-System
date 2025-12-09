@@ -1,0 +1,87 @@
+.transaction-table-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Header + Row Layout = Flexbox */
+.table-header,
+.table-body .table-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.table-header {
+    font-weight: bold;
+    background-color: #f7f7f7;
+    border-bottom: 2px solid #ccc;
+    color: #333;
+}
+
+.table-row {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+}
+
+.table-row:hover {
+    background-color: #f9f9f9;
+}
+
+/* Column Styling */
+.col {
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---- EXACT WIDTHS (Total = 100%) ---- */
+.col:nth-child(1) { width: 8%; }   /* Transaction ID */
+.col:nth-child(2) { width: 8%; }   /* Date */
+.col:nth-child(3) { width: 9%; }   /* Customer ID */
+.col:nth-child(4) { width: 13%; }  /* Customer Name */
+.col:nth-child(5) { width: 10%; }  /* Phone */
+.col:nth-child(6) { width: 7%; }   /* Gender */
+.col:nth-child(7) { width: 4%; }   /* Age */
+.col:nth-child(8) { width: 16%; }  /* Product Name */
+.col:nth-child(9) { width: 8%; }   /* Quantity */
+.col:nth-child(10){ width: 17%; }  /* Final Amount */
+
+.placeholder-text {
+    text-align: center;
+    color: #666;
+    padding: 30px 0;
+    font-style: italic;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+.pagination-controls button {
+    padding: 8px 14px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination-controls button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination-controls button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
